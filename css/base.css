@@ -1,1 +1,2 @@
 .c-fix:after{content: "";height: 0;clear: both;display: block;zoom:1;}
+*{margin: 0;padding: 0;}
