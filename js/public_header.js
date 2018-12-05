@@ -1,0 +1,16 @@
+$(document).ready(function(){
+	$("#country_arrow").mouseover(function(){
+		$('.country_select').show();
+		$('#country_name').removeClass('country_name_leave');
+		$('#country_name').addClass('country_name_enter');
+		$(".arrow_down").removeClass('arrow_rotate_leave');
+		$(".arrow_down").addClass('arrow_rotate_enter');
+	});
+	$("#country_arrow").mouseout(function(){
+		$('.country_select').hide();
+		$('#country_name').removeClass('country_name_enter');
+		$('#country_name').addClass('country_name_leave');
+		$(".arrow_down").removeClass('arrow_rotate_enter');
+		$(".arrow_down").addClass('arrow_rotate_leave');
+	});
+})

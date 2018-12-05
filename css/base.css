@@ -1,2 +1,58 @@
 .c-fix:after{content: "";height: 0;clear: both;display: block;zoom:1;}
 *{margin: 0;padding: 0;}
+a{text-decoration: none;}
+ul{margin:0;padding:0;list-style: none;}
+body{background-color: black;}
+
+/* font-dimension */
+@media screen and (max-width: 1920px){
+	*{font-size: 14px;}
+}
+
+/* font-icon */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?gt220c');
+  src:  url('../fonts/icomoon.eot?gt220c#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?gt220c') format('truetype'),
+    url('../fonts/icomoon.woff?gt220c') format('woff'),
+    url('../fonts/icomoon.svg?gt220c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .icon-envelope:before {
+  content: "\e901";
+}
+.icon-cart:before {
+  content: "\e902";
+}
+.icon-phone:before {
+  content: "\e903";
+}
+.icon-profile:before {
+  content: "\e923";
+}
+.icon-sinaweibo:before {
+  content: "\e904";
+  color: #e6162d;
+}
+.icon-cheveron-down:before {
+  content: "\e900";
+}
+ */

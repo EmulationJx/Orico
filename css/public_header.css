@@ -1,0 +1,50 @@
+.country_contact{width: 100%;margin: auto;background-color: rgba(255, 255, 255, 0.2);border-bottom: 1px solid rgba(255, 255, 255, 0.4);color: #fff;}
+.country{width: 50%;float: left;}
+.country span span:first-child{margin-left: 1%;}
+.icon-cheveron-down::before{content: "\e900";}
+.arrow_down{vertical-align: middle;display: inline-block;}
+.country_name_enter{
+	color:#2EC1E7;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+.country_name_leave{
+	color:#fff;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+.arrow_rotate_enter{
+	color:#2EC1E7;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+.arrow_rotate_leave{
+	color:#fff;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+}
+.country{position: relative;}
+.country_select{position: absolute;left: 1%;width:40%;background-color: #fff;border-radius: 5px;display:none;}
+.country_ul li{width:20%;float: left;margin:3% 2% 3% 3%;text-align: center;}
+.country_ul li a{
+	color:#9DA1A5;
+	width:100%;
+	display:inline-block;
+	transition: all 0.5s;
+}
+.country_ul li a:hover{
+	color: #fff;
+	background-color: #0ECCF2;
+	transition: all 0.5s;
+}
+
+.contact{width: 50%;float: left;}
+.contact a{color:#fff;}
+.contact a:hover{text-decoration: underline;}
+.logo_navmenu{width: 100%;margin:auto;color: #fff;}
+.logo{width: 50%;float: left;}
+.navmenu{width: 50%;float: left;}
