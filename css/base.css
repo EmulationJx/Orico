@@ -1,4 +1,4 @@
-.c-fix:after{content: "";height: 0;clear: both;display: block;zoom:1;}
+.c-fix::after{content: "";height: 0;clear: both;display: block;zoom:1;}
 *{margin: 0;padding: 0;}
 a{text-decoration: none;}
 ul{margin:0;padding:0;list-style: none;}
@@ -12,11 +12,11 @@ body{background-color: black;}
 /* font-icon */
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?gt220c');
-  src:  url('../fonts/icomoon.eot?gt220c#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?gt220c') format('truetype'),
-    url('../fonts/icomoon.woff?gt220c') format('woff'),
-    url('../fonts/icomoon.svg?gt220c#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?mzg7li');
+  src:  url('../fonts/icomoon.eot?mzg7li#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?mzg7li') format('truetype'),
+    url('../fonts/icomoon.woff?mzg7li') format('woff'),
+    url('../fonts/icomoon.svg?mzg7li#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,8 +42,20 @@ body{background-color: black;}
 .icon-cart:before {
   content: "\e902";
 }
+.icon-plus:before {
+  content: "\e909";
+}
+.icon-search:before {
+  content: "\e905";
+}
+.icon-location:before {
+  content: "\e908";
+}
 .icon-phone:before {
   content: "\e903";
+}
+.icon-cancel:before {
+  content: "\e90b";
 }
 .icon-profile:before {
   content: "\e923";
@@ -55,4 +67,16 @@ body{background-color: black;}
 .icon-cheveron-down:before {
   content: "\e900";
 }
- */
+.icon-servers:before {
+  content: "\e906";
+}
+.icon-time:before {
+  content: "\e90a";
+}
+.icon-document-list:before {
+  content: "\e907";
+} */
+
+
+
+

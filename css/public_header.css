@@ -1,6 +1,39 @@
-.country_contact{width: 100%;margin: auto;background-color: rgba(255, 255, 255, 0.2);border-bottom: 1px solid rgba(255, 255, 255, 0.4);color: #fff;}
+/* country and contact */
+.country_contact{width: 100%;margin: auto;background-color: rgba(255, 255, 255, 0.2);border-bottom: 1px solid rgba(255, 255, 255, 0.4);color: #fff;padding:0.6% 0;}
+
+/* addhodler content */
+.addholder_content{width:100%;background-color: #2B3033;display: none;position: relative;}
+.addholder_innerbox{width:73%;margin:auto;color:#fff;padding:2% 0;}
+.innberbox_content_public{width:30%;float:left;margin-left: 3.3%;}
+.innberbox_content_public h1{font-size: 1.4em;position: relative;}
+.innberbox_content_public h1::before{content: "";width:15%;height:3px;background-color: #0ECCF2;position: absolute;bottom: -30%;}
+.brand_box_indent {text-indent: 2em;color:#E1E1E1;}
+.brand_box :nth-child(2){margin-top: 10%;}
+.read_move{display:inline-block;background-color: #000;margin-top: 8%;border-radius: 5px;padding:2%;}
+.read_move a{color:#fff;}
+.read_move a:hover{color:#0ECCF2;}
+.test_box :nth-child(2){margin-top: 10%;}
+.icon-document-list::before {content: "\e907";color:#fff;}
+.test-data{display:inline-block;padding:0;margin-top: 0!important;}
+.test_box_public a{color:#E1E1E1;text-decoration: none;font-weight: 900;}
+.test_box_public{margin-top: 5%;}
+.answer_box :nth-child(2){margin-top: 10%;}
+.answer_box p {margin-top: 5%;}
+.answer_box samll {margin-left: 5%;font-size: 0.875em;}
+.answer_box a {margin-left: 5%;font-size: 0.875em;text-decoration: none;color:#fff;}
+.answer_box a:hover{text-decoration: underline;}
+.icon-time::before{content: "\e90a";color:#fff;} 
+.icon-location::before {content: "\e908";color:#fff;}
+.icon-answerphone::before {content: "\e903";color:#fff;}
+.icon-answeremail::before {content: "\e901";color:#fff;}
+.icon-cancel::before{content: "\e90b";}
+.addholder_close{position: absolute;top: 10%;right:5%;opacity: 0;transition: all 1s;color:#fff;}
+.addholder_close:hover{color:#0ECCF2;cursor:pointer;}
+
+/* country */
 .country{width: 50%;float: left;}
-.country span span:first-child{margin-left: 1%;}
+#country_name{padding:5% 0;}
+.country span span:first-child{margin-left: 2%;}
 .icon-cheveron-down::before{content: "\e900";}
 .arrow_down{vertical-align: middle;display: inline-block;}
 .country_name_enter{
@@ -28,23 +61,89 @@
 	-webkit-transform: rotate(0deg);
 }
 .country{position: relative;}
-.country_select{position: absolute;left: 1%;width:40%;background-color: #fff;border-radius: 5px;display:none;}
+.country_select{position: absolute;left: 1%;top: 170%;width:40%;background-color: #fff;border-radius: 5px;display:none;z-index: 999;}
 .country_ul li{width:20%;float: left;margin:3% 2% 3% 3%;text-align: center;}
 .country_ul li a{
 	color:#9DA1A5;
 	width:100%;
 	display:inline-block;
 	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .country_ul li a:hover{
 	color: #fff;
 	background-color: #0ECCF2;
 	transition: all 0.5s;
+	-webkit-transition: all -0.5s;
 }
 
-.contact{width: 50%;float: left;}
-.contact a{color:#fff;}
-.contact a:hover{text-decoration: underline;}
-.logo_navmenu{width: 100%;margin:auto;color: #fff;}
-.logo{width: 50%;float: left;}
-.navmenu{width: 50%;float: left;}
+/* contact */
+.contact{width: 50%;float: left;text-align:right;}
+.icon-envelope::before{content: "\e901";}
+.icon-phone::before{content:"\e903";}
+.icon-sinaweibo::before{content: "\e904";}
+.icon-cart::before{content: "\e902";}
+.icon-profile::before{content:"\e923";}
+.icon-marginright{margin-right: 1%;}
+.contact span {vertical-align:middle;}
+.contact a{color:#fff;margin-right: 2%;}
+.contact_a:hover{text-decoration: underline;}
+.addholder_outbox{
+	cursor: pointer;
+	margin-right: 2%;
+	vertical-align: middle;
+	display:inline-block;
+	transition: all 3s;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-name: addscale;
+
+}
+@keyframes addscale{
+	0%{
+		transform: scale(1, 1);
+		-webkit-transform: scale(1,1);
+	}
+	50%{
+		transform: scale(0.7, 0.7);
+		-webkit-transform: scale(0.7,0.7);
+	}
+	100%{
+		transform: scale(1, 1);
+		-webkit-transform: scale(1,1);
+	}
+
+}
+.addholder{display:flex;width: 20px;height: 20px; background-color: black;text-align:center;border-radius: 3px;align-items: center;justify-content: center;}
+.icon-plus::before{content: "\e909";font-size: 0.6em;}
+
+/* logo and navmenu */
+.logo_navmenu{width: 100%;margin:auto;color: #fff;display: flex;align-items: center;padding:0.6% 0;position:relative;}
+.logo{width: 30%;float: left;}
+.logo_box{width: 148px; margin-left: 2%;}
+.logo_box img{width: 100%; height:auto;}
+.navmenu{width: 80%;float: left;}
+.navmenu_box{width:100%;}
+.navmenu_ul{margin:0;padding:0;float: left;width:94%;}
+.li_container{float: right;width:630px;}
+.navmenu_ul li {float: left;margin-right: 4%;font-weight: 900;position:relative;}
+.navmenu_ul li:hover{cursor: pointer;}
+.navmenu_ul_circle{position: absolute;width:10px;height:10px;border-radius:10px;background-color: #0ECCF2;bottom: -70%;left: 40%;display: none;transition: all 1s;}
+.active_circle{display:block!important;}
+.navmenu_serachmenu{float: left;width: 6%;position:relative;}
+.navmenu_serachmenu:last-child::after{content: "";width:1px;height:100%;position:absolute;left: -18%;background-color: #fff;}
+.icon-search::before{content: "\e905";display: inline-block;width:40%;text-align: center;}
+.icon-servers::before{content: "\e906";display: inline-block;width:40%;text-align: center;}
+/* navmenu drapdown content */
+.computer_box{width:60%;background-color: #fff;position: absolute;top:80% ; right:1%;border-radius:5px; z-index: 998;}
+.computer_public{float: left;width:13.65%;color:#000;margin:2% 1.5%;position: relative;}
+.computer_public::before{content: "";width:1px;height:100%;background-color: #F1F1F1;position:absolute;right:-11.5%;}
+.computer_public:last-child::before{background-color: #fff!important;}
+.computer_public h2{position: relative;}
+.computer_public h2::before{content: "";position: absolute;width:25%;height:2px;background-color:#0ECCF2;bottom: -50%;}
+.computer_public ul li{border-bottom: 1px solid #F1F1F1;line-height: 3.5em;}
+.computer_public ul li:first-child{margin-top: 15%;} 
+.computer_public ul li:last-child{margin-bottom: 0;} 
+.computer_public ul li a{text-decoration: none;color:#000;font-size: 1em;display:inline-block;width:100%;transition: all 0.2s;}
+.computer_public ul li a:hover{background-color:#0ECCF2;color: #fff;transition: all 0.2s;}
+
