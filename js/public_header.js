@@ -50,19 +50,24 @@ $(document).ready(function(){
 
 	/**
 	 * nav menu
-	 */
-	$('.li_container').find('li').mouseover(function(el){
+	 */	
+	$('.li_container >li').mouseenter(function(event){
 		var str = $(this).find('i').attr('class');
 		var strId = $(this).attr('id');
 		if(!str.match('active_circle')){
 			$(this).find('i').show('fast');
-			event.stopPropagation();
 		}
 		if(strId.match('menu_computer')){
 			$('.computer_box').show();
+		}else if(strId.match('menu_phone')){
+			$('.phone_box').show();
+		}else if(strId.match('menu_stroage')){
+			$('.stroage_box').show();
+		}else if(strId.match('menu_stage')){
+			$('.stage_box').show();
 		}
 	});
-	$('.li_container').find('li').mouseout(function(el){
+	$('.li_container >li').mouseleave(function(evnet){
 		var str = $(this).find('i').attr('class');
 		var strId = $(this).attr('id');
 		if(!str.match('active_circle')){
@@ -70,6 +75,12 @@ $(document).ready(function(){
 		}
 		if(strId.match('menu_computer')){
 			$('.computer_box').hide();
+		}else if(strId.match('menu_phone')){
+			$('.phone_box').hide();
+		}else if(strId.match('menu_stroage')){
+			$('.stroage_box').hide();
+		}else if(strId.match('menu_stage')){
+			$('.stage_box').hide();
 		}
 	});
 	var oNavLi = $('.li_container').find('li');
@@ -81,4 +92,35 @@ $(document).ready(function(){
 		$(this).find('i').addClass('active_circle');
 	})
 
+	/*
+	 * search and servers click evnet
+	 */
+	$('.search_click').click(function(){
+		$('.search_content').show();
+	});
+	$('.search_close').click(function(){
+		$('.search_content').hide();
+	});
+	$('.servers_click').click(function(){
+		$('.servers_content').addClass('servers_show');
+	});
+	$('.servers_enter').click(function(){
+		$('.servers_content').removeClass('servers_show');
+	});
+
+	/**
+	 * servers content mouseenter
+	 */
+	$('.servers_box_public').mouseenter(function(){
+		$(this).find('img').addClass('img_scale');
+	});
+	$('.servers_box_public').mouseleave(function(){
+		$(this).find('img').removeClass('img_scale');
+	});
+	$('.servers_box_public2').mouseenter(function(){
+		$(this).find('img').addClass('img_scale');
+	});
+	$('.servers_box_public2').mouseleave(function(){
+		$(this).find('img').removeClass('img_scale');
+	})
 })
