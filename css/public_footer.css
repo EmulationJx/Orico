@@ -1,0 +1,25 @@
+/* footer_innerbox  */
+.footer_container{width: 100%;background-color: #2E2E2E;}
+.footer_innerbox{width:73%;margin: auto;}
+.footer_pbcinbox{float: left;width:18%;color:#fff;margin-left:2%;padding-top: 3%;padding-bottom: 3%}
+.footer_pbcinbox h3{display:inline-block;margin-left: 5%;}
+.icon-shop::before{content: "\e90f";}
+.fontshop{color:#fff;} 
+.icon-download::before{content: "\e90d";}
+.fontdownload{color:#fff;}
+.icon-store-front::before{content: "\e90e";}
+.fontfront{color:#fff;}
+.icon-info::before{content: "\e90c";}
+.fontinfo{color:#fff;}
+.icon-heart::before{content: "\e9da";}
+.fontheart{color:#fff;}
+.footer_pbcinbox ul li{padding-left: 11%;margin-top: 5%;}
+.footer_pbcinbox ul li a{text-decoration: none;color:#808080;transition: all 0.4s;}
+.footer_pbcinbox ul li a:hover{transition: all 0.4s;color:#00C9EE;}
+.li_weixin{position: relative;display:inline-block;}
+.li_weixin::after{content: url("../image/weixinma.png");position: absolute;left:-260%;top: -160%;display:none;}
+.li_weixin:hover.li_weixin::after{display: block;}
+/* footerweb_message */
+.footerweb_message{width: 100%;padding:1.4% 0;background-color: #252525;}
+.footerweb_innerbox{text-align: center;}
+.footerweb_innerbox p{color:#fff;}

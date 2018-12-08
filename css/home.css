@@ -1,0 +1,104 @@
+/* banner */
+.banner_imgcontent{position: relative;width:100%;}
+.public_img{display: block;position: absolute;width:100%;height:auto;}
+.home_banner{position: relative;}
+.banner_rect{position: absolute;bottom: 2%;left: 41%;z-index: 996;width:20%;}
+.public_rect{width: 10.5%;height: 4px;background-color: #8095AD;display:inline-block;transition: all 0.5s;cursor: pointer;position: relative;}
+.public_rectrun{}
+.public_rect:hover{
+	transform: scale(1, 2.5);
+	transition: all 0.5s;
+}
+
+.public_rectrun::after{
+	content: "";
+	position: absolute;
+	height: 100%;
+	background-color: #00DAFF;
+	animation-name: progessRect;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+
+@keyframes progessRect{
+	0%{
+		width: 0;
+	}
+	10%{
+		width: 10%;
+	}
+	20%{
+		width: 20%;
+	}
+	30%{
+		width: 30%;
+	}
+	40%{
+		width: 40%;
+	}
+	50%{
+		width: 50%;
+	}
+	60%{
+		width: 60%;
+	}
+	70%{
+		width: 70%;
+	}
+	80%{
+		width: 80%;
+	}
+	90%{
+		width: 90%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+/* samll banner */
+.sbanner_outbox{width:100%;padding: 2% 0;}
+.sbanner_innerbox{width:92%;margin: auto;}
+.sbr_pbcbox{float: left;width:30%;margin-left: 5%;position: relative;overflow: hidden;}
+.sbr_pbcbox:first-child{margin-left: 0;}
+.sbr_pbcbox img{width:100%;display:block;}
+.sbr_pbcbox a{display:block;}
+.srtscale{width: 1px;height:1px;background-color: rgba(255, 255, 255, 0);position:absolute;top: 50%;left: 50%;transition: all 1s;}
+.sbr_pbcbox:hover>.srtscale{
+	background-color: rgba(255, 255, 255, 0.3);
+	transition: all 1s;
+	transform: scale(550, 300);
+}
+
+/* samll logo */
+.slogo_outbox{width: 100%;background-color: #F1F1F1;}
+.slogo_innerbox{text-align: center;padding:2% 0;}
+.slogo_innerbox h2{font-size:1.7em;margin-top: 0.3%;color:#999999;}
+
+/* tab changed */
+.tab_outbox{width: 100%;background-color: #F1F1F1;border-top: 1px solid #fff;padding-top:3%;position: relative;}
+.tab_control{text-align:center;}
+.tab_control P{display:inline-block;margin-right: 3%;font-size: 1.2em;transition: all 0.3s;cursor:pointer;}
+.tab_control P:last-child{margin-right: 0;}
+.active_tab{color:#00C9EE;}
+.public_tabbox{position: absolute;background-color:#F1F1F1;}
+.tab_content0{display:block;width: 100%;padding-bottom: 3%;}
+.tab_content1{display:none;width: 100%;padding-bottom: 3%;}
+.tab_content2{display:none;width: 100%;padding-bottom: 3%;}
+.tab_control P:hover{color:#00C9EE;transition: all 0.3s;}
+.tab_publicline{width: 92%;margin:auto;display:flex;}
+.tab_publicline a{display:inline-block;width: 18%;margin-left: 2.5%;padding-top:2%;}
+.tab_publicline a:first-child{margin-left: 0;}
+.tab_publicline a img{width: 100%;height:auto;display:block;}
+.public_tabp{color:#8D8E8E;margin-top: 3%;}
+.public_tabp1{color:#000;margin-top: 3%;}
+.tab_publicline a img:hover{box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);}
+
+/* video */
+
+/* news content */
+.news_outbox{width: 100%;}
+.news_onebox{text-align: center;}
+.news_onebox h1{font-size: 1.8em;letter-spacing: 0.1em;margin-top: 4%;}
+.news_onebox p{font-size: 1.25em;margin-top: 1%;position: relative;}
+.news_onebox p::before{content: "";position: absolute;width: 5%;height:3px;background-color: #4C4C4C;left: 47.8%;bottom: -100%;}

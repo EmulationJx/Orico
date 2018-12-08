@@ -2,7 +2,6 @@
 *{margin: 0;padding: 0;}
 a{text-decoration: none;}
 ul{margin:0;padding:0;list-style: none;}
-body{background-color: black;overflow: hidden;}
 
 /* font-dimension */
 @media screen and (max-width: 1920px){
@@ -12,11 +11,11 @@ body{background-color: black;overflow: hidden;}
 /* font-icon */
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?mzg7li');
-  src:  url('../fonts/icomoon.eot?mzg7li#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?mzg7li') format('truetype'),
-    url('../fonts/icomoon.woff?mzg7li') format('woff'),
-    url('../fonts/icomoon.svg?mzg7li#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?kjjpc8');
+  src:  url('../fonts/icomoon.eot?kjjpc8#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?kjjpc8') format('truetype'),
+    url('../fonts/icomoon.woff?kjjpc8') format('woff'),
+    url('../fonts/icomoon.svg?kjjpc8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -51,6 +50,9 @@ body{background-color: black;overflow: hidden;}
 .icon-location:before {
   content: "\e908";
 }
+.icon-info:before {
+  content: "\e90c";
+}
 .icon-phone:before {
   content: "\e903";
 }
@@ -60,6 +62,9 @@ body{background-color: black;overflow: hidden;}
 .icon-profile:before {
   content: "\e923";
 }
+.icon-heart:before {
+  content: "\e9da";
+}
 .icon-sinaweibo:before {
   content: "\e904";
   color: #e6162d;
@@ -67,15 +72,25 @@ body{background-color: black;overflow: hidden;}
 .icon-cheveron-down:before {
   content: "\e900";
 }
+.icon-download:before {
+  content: "\e90d";
+}
 .icon-servers:before {
   content: "\e906";
+}
+.icon-store-front:before {
+  content: "\e90e";
 }
 .icon-time:before {
   content: "\e90a";
 }
 .icon-document-list:before {
   content: "\e907";
+}
+.icon-shop:before {
+  content: "\e90f";
 } */
+
 
 
 
