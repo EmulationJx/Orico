@@ -29,6 +29,9 @@ $(document).ready(function(){
 				})
 			$('.addholder_content').slideUp('slow');
 			addStatus = false;
+			$('.header_position').animate({
+				top : 0
+			},'slow');
 		}else{
 			$('.addholder_content').slideDown('slow',function(){
 				$('.addholder_close').css({
@@ -37,6 +40,9 @@ $(document).ready(function(){
 				})
 			});
 			addStatus = true;
+			$('.header_position').animate({
+				top : addContentHei + 'px'
+			},'slow');
 		}
 	});
 	$('.addholder_close').click(function(){
@@ -46,7 +52,18 @@ $(document).ready(function(){
 		});
 		$('.addholder_content').slideUp('slow');
 		addStatus = false;
+		$('.header_position').animate({
+			top : 0
+		},'slow');
 	})
+
+	/**
+	 * git addcontentHei
+	 */
+	 var addContentHei = $('.addholder_content').height();
+	 window.onresize = function(){
+	 	addContentHei = $('.addholder_content').height();
+	 }
 
 	/**
 	 * nav menu

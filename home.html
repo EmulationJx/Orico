@@ -4,14 +4,20 @@
 	<title>home</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/public_header.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/public_footer.css">
 	<script type="text/javascript" src="js/jquery.min.3.3.1.js"></script>
 	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/public_footer.js"></script>
 </head>
 <body>
-	
+	<!-- headerpage -->
+	<div class="headerpage"></div>
+
+	<!-- home content -->
 	<div class="home_container">
-		<!-- banner -->
+		<!-- banner --> 
 		<div class="home_banner">
 			<div class="banner_imgcontent">
 				<a href="javascript:void(0)"><img class="public_img" src="image/banner01.jpg" style="z-index: 1;" id="img-0"></a>
@@ -243,7 +249,15 @@
 
 		<!-- vedio  -->
 		<div class="vedio_outbox">
-			
+			<video class="home_video" autoplay="autoplay" loop="loop">
+				<source src="media/home.mp4" type="video/mp4">
+				<source src="media/home.webm" type="video/webm">
+			</video>
+			<a href="javascript:void(0)" class="video_a">
+				<p>用严苛标准与智能化充电科技</p>
+				<p>打造一个 "品质用电" 新时代</p>
+				<p>了解更多</p>
+			</a>
 		</div>
 
 		<!-- news content -->
@@ -253,9 +267,103 @@
 				<p>了解ORICO品牌最新动态</p>
 			</div>
 			<div class="news_twobox">
-				
+				<a class="news_githeia" href="javascript:void(0)">
+					<img src="image/news_01.jpg" >
+					<h3>江西展速递：ORICO点滴改变，大有不同</h3>
+					<data>2018-11-09</data>
+					<p>2018年11月9日至11日，首届中国国际消费电子通信产业博览会暨手机零配件展览会在江西南昌绿地国际博览中心举办。</p>
+				</a>
+				<a href="javascript:void(0)">
+					<img src="image/news_02.jpg" >
+					<h3>ORICO参加深圳礼品展，向世界传递中国科技新形象</h3>
+					<data>2018-10-22</data>
+					<p>ORICO携移动硬盘盒、USB排插、USB扩展、无线充电器、USB小风扇、移动电源。</p>
+				</a>
+				<a href="javascript:void(0)">
+					<img src="image/news_03.jpg" >
+					<h3>ORICO北京礼品展惊艳登场 用科技创意打造礼品盛宴</h3>
+					<data>2018-08-17</data>
+					<p>2018年8月16日，作为国内有影响力的北京礼品展在北京国际展览中心盛大举办。</p>
+				</a>
+			</div>
+		</div>
+
+		<!-- logo banner -->
+		<div class="logo_bannerbox">
+			<div class="logo_berinnerbox">
+				<p>品牌合作：</p>
+			</div>
+			<div class="logo_bercontent">
+				<div class="logober_pbbox c-fix logo_banboxone1 logo_banboxone">
+					<div>
+						<img src="image/logobone_01.jpg" >
+					</div>
+					<div>
+						<img src="image/logobone_02.png" >
+					</div>
+					<div>
+						<img src="image/logobone_03.png" >					
+					</div>					
+					<div>
+						<img src="image/logobone_04.png" >
+					</div>
+					<div>
+						<img src="image/logobone_05.jpg" >
+					</div>
+					<div>
+						<img src="image/logobone_06.jpg" >
+					</div>
+				</div>
+				<div class="logober_pbbox c-fix logo_banboxtwo2 logo_banboxtwo">
+					<div>
+						<img src="image/logobtwo_01.jpg" >
+					</div>
+					<div>
+						<img src="image/logobtwo_02.jpg" >
+					</div>
+					<div>
+						<img src="image/logobtwo_03.jpg" >					
+					</div>					
+					<div>
+						<img src="image/logobtwo_04.jpg" >
+					</div>
+					<div>
+						<img src="image/logobtwo_05.jpg" >
+					</div>
+					<div>
+						<img src="image/logobtwo_06.jpg" >
+					</div>
+				</div>
+				<div class="logober_pbbox c-fix logo_banboxthree3 logo_banboxthree">
+					<div>
+						<img src="image/logobthree_01.jpg" >
+					</div>
+					<div>
+						<img src="image/logobthree_02.jpg" >
+					</div>
+					<div>
+						<img src="image/logobthree_03.jpg" >					
+					</div>					
+					<div>
+						<img src="image/logobthree_04.jpg" >
+					</div>
+					<div>
+						<img src="image/logobthree_05.jpg" >
+					</div>
+					<div>
+						<img src="image/logobthree_06.jpg" >
+					</div>
+				</div>
+			</div>
+			<div class="logo_scircle">
+				<span class="public_logocirlce" id="logocircle1"></span>
+				<span class="public_logocirlce" id="logocircle2"></span>
+				<span class="public_logocirlce" id="logocircle3"></span>
 			</div>
 		</div>
 	</div>
+
+	<!-- footerpage -->
+	<div class="footerpage"></div>
 </body>
 </html> 
