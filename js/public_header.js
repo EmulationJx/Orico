@@ -17,6 +17,37 @@ $(document).ready(function(){
 		$(".arrow_down").addClass('arrow_rotate_leave');
 	});
 
+	var scrollStatus = false;
+	var navRundown = $('.logo_navmenu').outerHeight(true);
+	$(window).scroll(function(){
+		if($(window).scrollTop() > $('.logo_navmenu').offset().top+$('.logo_navmenu').outerHeight(true)){
+			$('.logo_navmenu').css({
+				position : 'fixed',
+				top : -$('.logo_navmenu').outerHeight(true),
+				color: '#000',
+				backgroundColor : 'rgba(255, 255, 255, 0.8)',
+				padding : '0.1% 0 0.1% 0'
+			});
+			$('.logo_navmenu').animate({
+				top : 0 + 'px'
+			});
+			$('.logo_box').find('img').attr({
+				'src' : "image/logo_black.png"
+			});
+		}
+		if($(window).scrollTop() < $('.logo_navmenu').position().top+$('.logo_navmenu').outerHeight(true)){
+			$('.logo_navmenu').css({
+				position : 'static',
+				color: '#fff',
+				backgroundColor : 'rgba(255, 255, 255, 0)',
+				padding : '0.6% 0 0.6% 0'
+			})
+			$('.logo_box').find('img').attr({
+				'src' : "image/logo-white.png"
+			});
+		}
+	})
+
 	/**
 	 * addholder and close button
 	 */

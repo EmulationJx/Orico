@@ -1,6 +1,5 @@
 $(function(){
-	
-	$('.headerpage').load('public_header.html');
+	$('.headerpage').load('public_header.html?rnd='+Math.random());
 	/**
 	 * get height
 	 */
@@ -221,5 +220,5 @@ $(function(){
 		}
 	});
 
-	$('.footerpage').load('public_footer.html');
+	$('.footerpage').load('public_footer.html?rnd='+Math.random());
 });
