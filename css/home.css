@@ -112,9 +112,8 @@
 .news_onebox p{font-size: 1.25em;margin-top: 1%;position: relative;}
 .news_onebox p::before{content: "";position: absolute;width: 5%;height:3px;background-color: #4C4C4C;left: 47.8%;bottom: -100%;}
 .news_twobox{margin-top: 2.5%;width: 64%;margin:auto;display:flex;position: relative;overflow: hidden;}
-.news_twobox a {margin-left: 2%;display:block;width: 31%;top: 100%;position: relative;}
+.news_twobox a {margin-left: 2%;display:block;width: 31%;top: 100%;}
 .news_abnoe{
-	left: 0;
 	animation-name: atagmovetop;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
@@ -139,7 +138,6 @@
 
 }
 .news_abtwo{
-	left: 0;
 	animation-name: atagmovetop1;
 	animation-duration: 1s;
 	animation-delay: 0.5s;
@@ -164,7 +162,6 @@
 
 }
 .news_abthree{
-	left: 0;
 	animation-name: atagmovetop2;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
@@ -188,6 +185,7 @@
 	}
 
 }
+.news_twobox a:nth-child(1){position: absolute;left: 0;}
 .news_twobox a:nth-child(2){position: absolute;left: 33%;}
 .news_twobox a:nth-child(3){position: absolute;left: 66%;}
 .news_twobox a img{display:block;width: 100%;height:auto;}

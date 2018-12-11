@@ -92,10 +92,9 @@ $(document).ready(function(){
 	 * git addcontentHei
 	 */
 	 var addContentHei = $('.addholder_content').height();
-	 window.onresize = function(){
+	 $(window).resize(function(){
 	 	addContentHei = $('.addholder_content').height();
-	 }
-
+	 });
 	/**
 	 * nav menu
 	 */	

@@ -24,7 +24,7 @@ $(function(){
 	$('.logo_bercontent').css({
 		height: logoBannerHeight+'px'
 	})
-	window.onresize = function(){
+	$(window).resize(function(){
 		imgDiv = $('.public_img').height();
 		$('.home_banner').css({
 			height: imgDiv+'px'
@@ -46,7 +46,7 @@ $(function(){
 		$('.logo_bercontent').css({
 			height: logoBannerHeight+'px'
 		})
-	};
+	});
 
 	/**
 	 *git offsetheight 

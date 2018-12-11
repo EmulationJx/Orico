@@ -1,0 +1,42 @@
+.computer_banner {position: relative;}
+.computer_banner img{display: block;width: 100%;height: auto;}
+.nav_content{position: absolute;top: 30%;transform: translateY(-50%);left: 50%;transform: translateX(-50%);width:100%;}
+.nav_content h4{font-size: 2em;color: #fff;text-align: center;}
+.nava-box{text-align:center;}
+.nava-box a{margin-left: 1%;margin-top: 2%;display:inline-block;position: relative;padding-right: 1%;border-right: 2px solid #fff;}
+.nava-box a p{color:#fff;font-size: 1.575em;transition: all 0.7s;}
+.nava-box a:first-child{margin-left: 0;}
+.nava-box a:last-child{padding-right: 0;border-right: 0;}
+.nava-box a:hover .hover_p{
+	color: #000;
+	border-radius: 5px;
+	background-color: #999;
+	transition: all 0.7s;
+}
+
+.pager_container{box-sizing: border-box;width:100%;padding: 1%;}
+.pager_control{display:flex;justify-content: center;box-sizing: border-box;align-items: center;}
+.pager_control a{color:#999;background-color: #E5E5E5;display:block;padding: 0.5%;margin-right: 0.5%;transition: all 0.5s;}
+.pager_control a:hover{
+	transition: all 0.5s !important;
+	color: #0ECCF2 !important;
+}
+
+.pager_control :nth-child(3){
+	color: #0ECCF2;
+}
+
+.pager_control :nth-child(1),.pager_control :nth-child(2),
+.pager_control :nth-child(13),.pager_control :nth-child(14),
+.pager_control :nth-child(15),.pager_control :nth-child(16),
+.pager_control :nth-child(17),.pager_control :nth-child(18),
+.pager_control :nth-child(19),.pager_control :nth-child(20),
+.pager_control :nth-child(21),.pager_control :nth-child(22),
+.pager_control :nth-child(23),.pager_control :nth-child(24){
+	display: none;
+}
+
+
+
+
+
