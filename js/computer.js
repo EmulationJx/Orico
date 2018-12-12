@@ -15,118 +15,334 @@ $(function(){
 		});
 	})
 
+	/* create pager content Element*/
+	
+
+	/* create pager control Element */
+	var oPagerControl = $('.pager_control');
+	oPagerControl.append("<a class='pagerupall' href='javascript:void(0)' id='a-0'><<</a>");
+	oPagerControl.append("<a class='pagerup' href='javascript:void(0)' id='a-1'><< 上一页</a>");
+	/* get ajax data show pager number */
+	for (var i = 1; i <= 22; i++) {
+		oPagerControl.append("<a class='pagerup' href='javascript:void(0)'>" + i + "</a>");
+	}
+	oPagerControl.append("<a class='pagerdown' href='javascript:void(0)' id='a-2'>下一页 >></a>");
+	oPagerControl.append("<a class='pagerdownall' href='javascript:void(0)' id='a-3'>>></a>");
+
+	/* init show tag */
 	var oPagerBtn = $('.pager_control').find('a');
+	for (var x = 0; x < 2; x++) {
+		$(oPagerBtn[x]).css({
+			display : 'none'
+		});
+	}
+	for (var i = 12; i < oPagerBtn.length-2; i++) {
+		$(oPagerBtn[i]).css({
+			display : 'none'
+		});
+	}
+	$(oPagerBtn[2]).css({
+		color: '#0ECCF2'
+	});
+
+	/* init current*/
 	var current = 2;
 	$('.pager_control > a').click(function(){
-		for (var i = 0; i < oPagerBtn.length; i++) {
-			$(oPagerBtn[i]).css({
-				color : '#999'
+		/* if is not repeat click */
+		if($(this).text() != current-1) {
+			/* shwo down downall */
+			$(oPagerBtn[oPagerBtn.length-2]).css({
+				display : 'inline-block'
 			});
-		}
-		if(parseInt($(this).text()) >= 1 && parseInt($(this).text()) <= 22 ){
-			$(this).css({
-				color: '#0ECCF2'
+			$(oPagerBtn[oPagerBtn.length-1]).css({
+				display : 'inline-block'
 			});
-			current = parseInt($(this).text()) + 1;
-		}
-		if(parseInt($(this).text()) >1){
-			$(oPagerBtn[0]).css({
-					display : 'inline-block'
-			});
-			$(oPagerBtn[1]).css({
-					display : 'inline-block'
-			});
-			for (var x = 2; x < oPagerBtn.length-2; x++) {
-				$(oPagerBtn[x]).css({
-					display : 'none'
+
+			/* click all button color no */
+			for (var i = 0; i < oPagerBtn.length; i++) {
+				$(oPagerBtn[i]).css({
+					color : '#999'
 				});
 			}
-			if(parseInt($(this).text()) == 1 || parseInt($(this).text()) == 2){
-				for (var j = 1; j <= 11; j++) {
-					$(oPagerBtn[j]).css({
-						display : 'inline-block'
+
+			/* control click btn color and goto */
+			if(parseInt($(this).text()) > 2 && parseInt($(this).text()) < oPagerBtn.length-4 ){
+				if(parseInt($(this).text()) > 2 && parseInt($(this).text()) < oPagerBtn.length-11){
+					$(this).css({
+						color: '#0ECCF2'
 					});
-				}
-			}else {
-				for (var j = parseInt($(this).text())-1; j < parseInt($(this).text())+9; j++) {
-					$(oPagerBtn[j]).css({
-						display : 'inline-block'
+					/* record current site */
+					current = parseInt($(this).text()) + 1;
+
+					/* >1 show up upall */
+					$(oPagerBtn[0]).css({
+							display : 'inline-block'
 					});
-				}
-			}
-		}
-		var str = '';
-		if($(this).attr('id')){
-			str = $(this).attr('id');
-			var arr = str.split('-');
-			if(parseInt(arr[1]) == 0){
-				$(oPagerBtn[0]).css({
-					display : 'none'
-				});
-				$(oPagerBtn[1]).css({
-					display : 'none'
-				});
-				for (var i = 0; i < oPagerBtn.length; i++) {
-					$(oPagerBtn[i]).css({
-						color : '#999'
+					$(oPagerBtn[1]).css({
+							display : 'inline-block'
 					});
-				}
-				$(oPagerBtn[2]).css({
-					color : '#0ECCF2'
-				});
-				for (var j = 2; j < oPagerBtn.length-2; j++) {
-					$(oPagerBtn[j]).css({
-						display : 'none'
-					});
-				}
-				for (var x = 2; x < 12; x++) {
-					$(oPagerBtn[x]).css({
-						display : 'inline-block'
-					});
-				}
-			}else if(parseInt(arr[1]) == 1){
-				if(current > 2 ){
-					current -= 1;
-					$(oPagerBtn[current]).css({
-						color : '#0ECCF2'
-					});
+					/* pager btn show and hide*/
 					for (var i = 2; i < oPagerBtn.length-2; i++) {
 						$(oPagerBtn[i]).css({
 							display : 'none'
 						});
 					}
-					if(current > 4){
-						for (var j = current-2; j < current+8; j++) {
-							$(oPagerBtn[j]).css({
-								display : 'inline-block'
-							});
-						}
-					}else{
-						for (var y = current; y < current+10;y++) {
-							$(oPagerBtn[y]).css({
-								display : 'inline-block'
-							});
-						}
-					}
-					if(current == 2){
-						$(oPagerBtn[0]).css({
-							display : 'none'
-							});
-						$(oPagerBtn[1]).css({
-							display : 'none'
+					for (var i = current-2; i < current+8; i++) {
+						$(oPagerBtn[i]).css({
+							display : 'inline-block'
 						});
 					}
 				}else{
+					$(this).css({
+						color: '#0ECCF2'
+					});
+					/* record current site */
+					current = parseInt($(this).text()) + 1;
+
+					/* >1 show up upall */
+					$(oPagerBtn[0]).css({
+							display : 'inline-block'
+					});
+					$(oPagerBtn[1]).css({
+							display : 'inline-block'
+					});
+					/* pager btn show and hide*/
+					for (var i = 2; i < oPagerBtn.length-2; i++) {
+						$(oPagerBtn[i]).css({
+							display : 'none'
+						});
+					}
+					for (var i = oPagerBtn.length-12; i < oPagerBtn.length-2; i++) {
+						$(oPagerBtn[i]).css({
+							display : 'inline-block'
+						});
+					}
+				}
+			}else {
+				/* click one pager btn */
+				if(parseInt($(this).text()) == 1){
+					$(oPagerBtn[0]).css({
+						display : 'none'
+					});
+					$(oPagerBtn[1]).css({
+						display : 'none'
+					});
 					$(oPagerBtn[2]).css({
 						color : '#0ECCF2'
-					});	
-				}	
-			}else if(parseInt(arr[1]) == 2){
-				// ++
-			}else if(parseInt(arr[1]) == 3){
-				// to end 
+					})
+					current = 2;
+				/* click two pager btn */
+				}else if(parseInt($(this).text()) == 2){
+					$(oPagerBtn[0]).css({
+						display : 'inline-block'
+					});
+					$(oPagerBtn[1]).css({
+						display : 'inline-block'
+					});
+					$(oPagerBtn[3]).css({
+						color : '#0ECCF2'
+					})
+					current = 3;
+				/* click end paer btn */
+				}else if(parseInt($(this).text()) == parseInt($(oPagerBtn[oPagerBtn.length-3]).text())){
+					$(oPagerBtn[oPagerBtn.length-2]).css({
+						display : 'none'
+					});
+					$(oPagerBtn[oPagerBtn.length-1]).css({
+						display : 'none'
+					});
+					$(oPagerBtn[0]).css({
+						display : 'inline-block'
+					});
+					$(oPagerBtn[1]).css({
+						display : 'inline-block'
+					});
+					$(oPagerBtn[oPagerBtn.length - 3]).css({
+						color : '#0ECCF2'
+					})
+					current = oPagerBtn.length - 3;
+				}
 			}
-		}
+
+			/* if click up upall down downall */
+			var str = '';
+			if($(this).attr('id')){
+				str = $(this).attr('id');
+				var arr = str.split('-');
+
+				/* click upall */
+				if(parseInt(arr[1]) == 0){
+					current = 2;
+					$(oPagerBtn[0]).css({
+						display : 'none'
+					});
+					$(oPagerBtn[1]).css({
+						display : 'none'
+					});
+					$(oPagerBtn[2]).css({
+						color : '#0ECCF2'
+					});
+					for (var j = 2; j < oPagerBtn.length-2; j++) {
+						$(oPagerBtn[j]).css({
+							display : 'none'
+						});
+					}
+					for (var x = 2; x < 12; x++) {
+						$(oPagerBtn[x]).css({
+							display : 'inline-block'
+						});
+					}
+					$(oPagerBtn[oPagerBtn.length-2]).css({
+						display : 'inline-block'
+					});
+					$(oPagerBtn[oPagerBtn.length-1]).css({
+						display : 'inline-block'
+					});
+				}
+				/* click up */
+				else if(parseInt(arr[1]) == 1){
+					if(current >= 2){
+						current -= 1;
+						$(oPagerBtn[current]).css({
+							color : '#0ECCF2'
+						});
+						if(current == 2){
+							$(oPagerBtn[0]).css({
+								display : 'none'
+					 			});
+					 		$(oPagerBtn[1]).css({
+					 			display : 'none'
+					 		});
+						}
+						if(current >= 1 && current <= 3){
+							for (var i = 2; i < oPagerBtn.length-2; i++) {
+						 		$(oPagerBtn[i]).css({
+						 			display : 'none'
+						 		});
+						 	}
+						 	for (var j = 2; j <= 11; j++) {
+						 		$(oPagerBtn[j]).css({
+						 			display : 'inline-block'
+						 		});
+						 	}
+						}else if(current >=  oPagerBtn.length -10 && current <= oPagerBtn.length - 3){
+							for (var i = 2; i < oPagerBtn.length-2; i++) {
+						 		$(oPagerBtn[i]).css({
+						 			display : 'none'
+						 		});
+						 	}
+						 	for (var j = oPagerBtn.length-12; j < oPagerBtn.length-2; j++) {
+								$(oPagerBtn[j]).css({
+									display : 'inline-block'
+								});
+							}
+
+						}else{
+							for (var i = 2; i < oPagerBtn.length-2; i++) {
+						 		$(oPagerBtn[i]).css({
+						 			display : 'none'
+						 		});
+						 	}
+						 	for (var j = current - 2; j < current + 8 ; j++) {
+						 		$(oPagerBtn[j]).css({
+						 			display : 'inline-block'
+						 		});
+						 	}
+						}
+					}	
+				}
+				/* click down */
+				else if(parseInt(arr[1]) == 2){
+					if(current <= oPagerBtn.length-4){
+						current += 1;
+						$(oPagerBtn[current]).css({
+							color : '#0ECCF2'
+						});
+						if(current > 2){
+							$(oPagerBtn[0]).css({
+								display : 'inline-block'
+					 			});
+					 		$(oPagerBtn[1]).css({
+					 			display : 'inline-block'
+					 		});
+						}
+						if(current == oPagerBtn.length-3){
+							$(oPagerBtn[oPagerBtn.length - 2]).css({
+								display : 'none'
+					 			});
+					 		$(oPagerBtn[oPagerBtn.length - 1]).css({
+					 			display : 'none'
+					 		});
+						}
+						if(current >= 1 && current <= 3){
+							for (var i = 2; i < oPagerBtn.length-2; i++) {
+						 		$(oPagerBtn[i]).css({
+						 			display : 'none'
+						 		});
+						 	}
+						 	for (var j = 2; j <= 11; j++) {
+						 		$(oPagerBtn[j]).css({
+						 			display : 'inline-block'
+						 		});
+						 	}
+						}else if(current >=  oPagerBtn.length -10 && current <= oPagerBtn.length - 3){
+							for (var i = 2; i < oPagerBtn.length-2; i++) {
+						 		$(oPagerBtn[i]).css({
+						 			display : 'none'
+						 		});
+						 	}
+						 	for (var j = oPagerBtn.length-12; j < oPagerBtn.length-2; j++) {
+								$(oPagerBtn[j]).css({
+									display : 'inline-block'
+								});
+							}
+
+						}else{
+							for (var i = 2; i < oPagerBtn.length-2; i++) {
+						 		$(oPagerBtn[i]).css({
+						 			display : 'none'
+						 		});
+						 	}
+						 	for (var j = current - 2; j < current + 8 ; j++) {
+						 		$(oPagerBtn[j]).css({
+						 			display : 'inline-block'
+						 		});
+						 	}
+						}
+					}
+				}
+				/* click downall */
+				else if(parseInt(arr[1]) == 3){
+					current = oPagerBtn.length-3;
+					$(oPagerBtn[0]).css({
+						display : 'inline-block'
+					});
+					$(oPagerBtn[1]).css({
+						display : 'inline-block'
+					});
+					$(oPagerBtn[oPagerBtn.length-1]).css({
+						display : 'none'
+					});
+					$(oPagerBtn[oPagerBtn.length-2]).css({
+						display : 'none'
+					});
+					for (var j = 2; j < oPagerBtn.length-2; j++) {
+						$(oPagerBtn[j]).css({
+							display : 'none'
+						});
+					}
+					for (var j = oPagerBtn.length-12; j < oPagerBtn.length-2; j++) {
+						$(oPagerBtn[j]).css({
+							display : 'inline-block'
+						});
+					}
+					$(oPagerBtn[oPagerBtn.length-3]).css({
+						color : '#0ECCF2'
+					});
+				}
+			}
+		alert($(oPagerBtn[current]).text());
+		}	
 	});
 
 	/* get public footer */

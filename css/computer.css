@@ -22,20 +22,6 @@
 	color: #0ECCF2 !important;
 }
 
-.pager_control :nth-child(3){
-	color: #0ECCF2;
-}
-
-.pager_control :nth-child(1),.pager_control :nth-child(2),
-.pager_control :nth-child(13),.pager_control :nth-child(14),
-.pager_control :nth-child(15),.pager_control :nth-child(16),
-.pager_control :nth-child(17),.pager_control :nth-child(18),
-.pager_control :nth-child(19),.pager_control :nth-child(20),
-.pager_control :nth-child(21),.pager_control :nth-child(22),
-.pager_control :nth-child(23),.pager_control :nth-child(24){
-	display: none;
-}
-
 
 
 
