@@ -16,7 +16,19 @@ $(function(){
 	})
 
 	/* create pager content Element*/
-	
+	var oPagerContent = $('.pager_content_innerbox');
+
+	/* get json data */
+	var getData;
+	var getPagerNumber = 0;
+	$.get('computerdata.json',function(data,status){
+		getData = JSON.parse(data);
+		computer_stroage = getData.computer.computer_stroage_01;
+		getPagerNumber = computer_stroage.length;
+		for (var i = 0; i < computer_stroage.length; i++) {
+			oPagerContent.append('<div class="pagercontent-innerbox"><a href="javascript:void(0)"><img src=' + computer_stroage[i].image_ul + '></img><p class="pager_bp">' + computer_stroage[i].title + '</p><p class="pager_bp">' + computer_stroage[i].detail + '</p></a></div>');
+		}
+	});
 
 	/* create pager control Element */
 	var oPagerControl = $('.pager_control');
@@ -24,7 +36,7 @@ $(function(){
 	oPagerControl.append("<a class='pagerup' href='javascript:void(0)' id='a-1'><< 上一页</a>");
 	/* get ajax data show pager number */
 	for (var i = 1; i <= 22; i++) {
-		oPagerControl.append("<a class='pagerup' href='javascript:void(0)'>" + i + "</a>");
+		oPagerControl.append("<a href='javascript:void(0)'>" + i + "</a>");
 	}
 	oPagerControl.append("<a class='pagerdown' href='javascript:void(0)' id='a-2'>下一页 >></a>");
 	oPagerControl.append("<a class='pagerdownall' href='javascript:void(0)' id='a-3'>>></a>");
@@ -50,6 +62,7 @@ $(function(){
 	$('.pager_control > a').click(function(){
 		/* if is not repeat click */
 		if($(this).text() != current-1) {
+
 			/* shwo down downall */
 			$(oPagerBtn[oPagerBtn.length-2]).css({
 				display : 'inline-block'
@@ -341,7 +354,7 @@ $(function(){
 					});
 				}
 			}
-		alert($(oPagerBtn[current]).text());
+		// alert($(oPagerBtn[current]).text());
 		}	
 	});
 

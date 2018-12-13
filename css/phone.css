@@ -1,0 +1,14 @@
+.phone_banner img{display:block;width:100%;height: auto;}
+.phone_control{background-color:#F6F6F6;margin:1% 0;}
+.phone_ctl_innerbox{width: 62.5%;margin: auto;}
+
+.phone_btn {width:100%;margin:auto;display:flex;justify-content:center;align-items: center;}
+.phone_btn a{color:#333;margin-right: 3%;}
+.phone_upctl,.pic_list,.phone_downctl{display:inline-block;}
+.pic_list{width:30%;text-align: center;}
+.pic_list a{width:5%;display:inline-block;}
+.pic_list a:last-child{margin-right: 0;}
+.phone_upctl,.phone_downctl{width:35%;}
+.phone_upctl{text-align: right;}
+.phone_downctl{padding-left: 0.9%;}
+

@@ -118,6 +118,7 @@
 .icon-plus::before{content: "\e909";font-size: 0.6em;}
 
 /* logo and navmenu */
+.nav_main_a{color:#fff;}
 .logo_navmenu{width: 100%;margin:auto;color: #fff;display: flex;align-items: center;padding:0.6% 0;}
 .logo{width: 30%;float: left;}
 .logo_box{width: 148px; margin-left: 2%;}
