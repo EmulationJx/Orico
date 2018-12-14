@@ -1,0 +1,41 @@
+.phone_banner{position: relative;}
+.phone_banner img{display:block;width:100%;height: auto;}
+.phone_cover{position: absolute;top: 30%;width:100%;left: 50%;transform: translateX(-50%);}
+.phone_cover h2{text-align: center;font-size: 2em;color:#fff;}
+.phone_cover_nav{text-align: center;margin-top: 1%;}
+.phone_cover_nav a{color:#fff;margin-right: 1%;display:inline-block;border-right: 1px solid #fff;padding-right:1%;}
+.phone_cover_nav a:last-child{padding-right:0;border-right: none;}
+.phone_cover_nav a p{display:inline-block;border-radius: 5px;}
+.phone_cover_nav :last-child{margin-right: 0;}
+.phone_cover_nav a:hover .phone_nav_p{
+	color: #0ECCF2;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.phone_control{background-color:#F6F6F6;margin:2% 0;}
+.phone_ctl_innerbox{width: 62.5%;margin: auto;}
+.phone_show_content{padding: 2% 0;display:flex;justify-content:center;}
+.phone_contentbox{background-color: #fff;width:31%;margin-right:2%;display:inline-block;padding: 2% 0;transition: all 0.5s;margin-top: 2%;text-decoration: underline #fff;}
+.phone_contentbox:last-child{margin-right:0;}
+.phone_contentbox img{width:100%;height: auto;}
+.phone_contentbox p{text-align: center;padding: 0 4%;color: #000;}
+.phone_contentbox p:last-child{margin-top: 2%;color:#999999;}
+.phone_contentbox:hover{
+	box-shadow: 0 2px 5px 0 #000;
+	transform: translateY(-2%);
+	transition: all 0.5s;
+}
+
+.phone_contentbox:hover{
+	text-decoration: underline #0ECCF2;
+}
+
+.phone_btn{width: 100%;margin:auto;padding: 2%;}
+.phone_list{text-align: center;}
+.phone_list li {display:inline-block;margin-right:0.2%;padding: 0.5%;background-color: #E5E5E5;}
+.phone_list li a{color: #999999;transition: all 0.5s;}
+.phone_list li:hover .phonelist_a{
+	color: #0ECCF2;
+	transition: all 0.5s;
+}
