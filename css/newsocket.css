@@ -1,0 +1,60 @@
+.newsocket_container{width: 100%;}
+
+.newsocket_bannerbox{position: relative;}
+.newsocket_bannerbox video{width:100%;display:block;}
+.newsocket_logofont{position: absolute;width:100%;top: 8.2%;z-index: 1001;}
+.newsocket_logofont p{color:#fff;margin-left: 10%;font-size: 1.3em;position: relative;display:inline-block;}
+.newsocket_logofont p::after{content: "";position: absolute;width:1px;height: 100%;background-color: #fff;left: -1%;}
+.newsocket_cover{position: absolute;top: 0;width:100%;height: 100%; background-color: rgba(0, 0, 0, 0.5);}
+.nc_ptitleone,.nc_ptitletwo{text-align: center;font-size: 5em;color: #fff;}
+.nc_ptitleone{margin-top: 12%;}
+.nc_ptitletwo{text-indent: -1em;margin-top: 5%;}
+.newsocket_banner_detail {position: absolute;bottom: 5%;width:100%;}
+.newsocket_banner_detail ul {text-align: center; }
+.newsocket_banner_detail ul li{display: inline-block;margin-right: 5%;}
+.newsocket_banner_detail h2{color:#fff;font-size: 2.5em;text-align: left;}
+.newsocket_banner_detail p{color:#fff;font-size: 1em;text-align: left;}
+
+.newsocket_content1{background-color: #131517;margin: 1% 0 0;padding: 5% 0;position: relative;}
+.newsocket_content1 h3{
+	position: absolute;
+	color:#fff;
+	margin-left: 15%;
+	border: 1px solid #1B8FA6;
+	display:inline-block;
+	padding: 1%;
+	border-radius: 5px;
+	color:#1B8FA6;
+	font-size: 2em;
+	font-weight: 100;}
+.newsocket_content1 p{color:#fff;margin-left: 15%;}
+.ns_c1_lp{margin-top: 6%;position: absolute;width:100%;opacity: 0;transition: all 1s;}
+.ns_c1_lp_show{
+	transition: all 1s;
+	animation-name: showfont;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.2s;
+}
+.ns_c1_lp p{font-size: 4em;}
+.ns_c1_l_detial{margin-top: 22%;font-size:1.35em;position: absolute;transition: all 1s;opacity:0;}
+.ns_c1_l_detial_show{
+	transition: all 1s;
+	animation-name: showfont;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.2s;
+}
+.ns_c1_right{width:50%;float: right;}
+.ns_c1_right img{width: 100%;display:block;}
+
+@keyframes showfont{
+	100%{
+		transform: translateY(-10px);
+		opacity:1;
+	}
+}
+
+.newsocket_cotnent2{width: 100%;position: relative;}
+.newsocket_cotnent2 img{display:block;width:100%;}
+.newsocket_cotnent2 p {position: absolute;bottom: 30%;right: 10%;font-size: 1.4em;line-height: 1.9em;display:inline;width:35%;}
