@@ -7,7 +7,7 @@ $(function(){
 		'ns_c8_title','ns_c8_pic','ns_c8_detail','ns_c9_desgin','ns_c9_title','ns_c9_detail','ns_c10_title1','ns_c10_title2','ns_c10_desgin',
 		'ns_c10_detail','ns_c11_title','ns_c11_desgin','ns_c11_detail','ns_c12_title','ns_c12_detail','ns_c13_pic','ns_c13_title','ns_c13_detail',
 		'ns_c14_desgin','ns_c14_title','ns_c14_detail','ns_c15_title','ns_c16_title','ns_c16_detail','ns_c16_footer','ns_c17_title','ns_c17_pic',
-		'ns_c18_title','ns_c18_pic'];
+		'ns_c18_title','ns_c18_pic','ns_v3_title','ns_v3_detail','ns_c20_title1','ns_c20_title2','ns_c20_desgin'];
 		var scrollHei = $(window).scrollTop();
 		var elementAbsolute;
 		var elementSelfHeight;
